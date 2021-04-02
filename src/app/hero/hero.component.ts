@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Hero } from '../heroes/hero.model';
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +10,13 @@ export class HeroComponent implements OnInit, OnChanges {
 
   @Input() name: string;
   @Output() liked = new EventEmitter<boolean>();
+  heroes: Hero[] = [
+    { id: 1, name: 'Boothstomper', team: 'avengers' },
+    { id: 2, name: 'Drogfisher', team: 'avengers' },
+    { id: 3, name: 'Bloodyllips', team: 'villains' },
+    { id: 4, name: 'Mr Bu Moverse', team: 'villains' },
+    { id: 5, name: 'Piranhaelli', team: '' }
+  ];
   constructor() { }
 
   ngOnInit(): void {

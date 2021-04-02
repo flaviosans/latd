@@ -2,3 +2,11 @@
 <p>
     <button (click)="liked.emit(true)">Like</button>
 </p>
+
+<div>
+    <ul>
+        <li *ngFor="let hero of heroes | sort:'name'">
+            {{hero.name }}
+        </li>
+    </ul>
+</div>
