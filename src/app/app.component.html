@@ -1,1 +1,6 @@
 <app-hero [name]="hero" (liked)="onLike()"></app-hero>
+<input appNumeric type="text" />
+<div *appPermission="['admin', 'agent']">
+    Área dos admins ou dos agentes
+</div>
+<p appCopyright></p>
